@@ -1,0 +1,76 @@
+* {
+    font-family: 'Montserrat';
+}
+
+.nav-propio {
+    height: 100px;
+}
+
+.inline {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.ancho {
+    height: 400px;
+    width: 100%;
+}
+
+.mapa {
+    height: 85%;
+}
+
+.flecha {
+    font-size: 2.5rem;
+}
+
+.info {
+    font-size: 1.5rem;
+}
+
+.close {
+    font-size: 1.3rem;
+    color:gray;
+}
+
+.close:hover {
+    color: purple;
+    cursor: pointer;
+}
+
+.footer {
+    /* background-color: blueviolet; */
+    height: 100px;
+}
+
+#navig > a:hover {
+    /* background-color: rgba(211,211,211,0.4); */
+    background-color: rgba(255,99,71,0.3);
+}
+
+#warn > a:hover {
+    background-color: rgba(255,99,71,0.3);
+}
+
+/* SLIDERS */
+.c {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: rgb(40,40,40);
+    box-shadow: 2px 2px rgba(40,40,40,0.3);
+}
+
+.i {
+    height: 65%;
+}
+
+.c:hover {
+    background-color: purple;
+}
+
+@media screen and (max-width: 600px) {
+    .ocultar-div{
+    display:none;
+    }
+}

@@ -17,7 +17,8 @@ const getData = async(url,etiq,varPor) => {
         for(let h=1;h<data.meta.length;h++){
             for(let k=inicio;k<data.count;k++){
                 let single=data.data[k][h]
-                arr_int.push(parseFloat((single).toFixed(1)))
+                arr_int.push(single)
+                // arr_int.push(parseFloat((single).toFixed(1)))
             }
             serie.push(arr_int)
             arr_int=[]

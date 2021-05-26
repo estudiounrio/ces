@@ -10,10 +10,11 @@ const getData = async(url,etiq,varPor) => {
         let series =[]
         let inicio
         if(data.meta[0].frequency==='quarter') { inicio = data.count-5} else {inicio =data.count-13}
-  
-        
+        console.log(periodo)
         for(let j=1;j<data.meta.length;j++){ etiquetas.push(data.meta[j].field.description) }
+        
         for (let i=inicio;i<data.count;i++){periodo.push(data.data[i][0])}
+        
         for(let h=1;h<data.meta.length;h++){
             for(let k=inicio;k<data.count;k++){
                 let single=data.data[k][h]
@@ -32,7 +33,7 @@ const getData = async(url,etiq,varPor) => {
             }
             series.push(conj)
         } 
-        
+        console.log(series,periodo.length)
         let meta = {
             frecuencia: data.meta[0].frequency,
             titulo: data.meta[1].distribution.title,
@@ -42,7 +43,7 @@ const getData = async(url,etiq,varPor) => {
             datos: varPor ? variaciones(data.meta[0].frequency,series,varPor) : series
         }
         return meta
-
+        
     } catch (error) {
         console.log(error)
     }

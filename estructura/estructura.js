@@ -25,7 +25,7 @@ document.getElementById('navig').addEventListener('click', function(e){
     if(e.target.name==='Sectores Productivos'){
         navContenedor.innerHTML = `
         <h5>${e.target.name}</h5>
-        <select id="nav_select" aria-label="Default select example">
+        <select id="nav_select" class="form-select" aria-label="Default select example">
             <option selected disabled>Selecciones Sector</option>
             <option value="uci">Utilización de la Capacidad Instalada</option>
             <option value="nivelgral">IPI Nivel General</option>

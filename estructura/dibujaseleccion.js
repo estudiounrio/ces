@@ -164,8 +164,8 @@ const dibujaSeleccion = (seleccion) => {
         Graficar(dt.inflacion.pr2,tg[3],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones','Variación %')
         Graficar(dt.inflacion.pr3,tg[4],true,'','','IPC-Nacional. Nivel General. Divisiones (Cont.)','Índice Base= 2016. INDEC')
         Graficar(dt.inflacion.pr3,tg[5],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones (Cont.)','Variación %')
-        Graficar(dt.inflacion.sipim,tg[6],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
-        Graficar(dt.inflacion.sipim,tg[7],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
+        // Graficar(dt.inflacion.sipim,tg[6],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
+        // Graficar(dt.inflacion.sipim,tg[7],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
     }
 }
 

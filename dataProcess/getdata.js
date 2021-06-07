@@ -2,21 +2,19 @@ const getData = async(url,etiq,varPor) => {
     try {
         const datos = await fetch(`https://apis.datos.gob.ar/series/api/series?ids=${url}&format=json&limit=1000`)
         const data = await datos.json()
-        console.log(data)
         let periodo = []
         let etiquetas = []
         let arr_int = []
         let serie = []
         let series =[]
         let inicio
-        if(data.meta[0].frequency==='quarter') { inicio = data.count-5} else {inicio =data.count-13}
-        console.log(periodo)
+        if(data.meta[0].frequency==='quarter') { inicio = data.data.length-5} else {inicio =data.data.length-13}
         for(let j=1;j<data.meta.length;j++){ etiquetas.push(data.meta[j].field.description) }
         
-        for (let i=inicio;i<data.count;i++){periodo.push(data.data[i][0])}
+        for (let i=inicio;i<data.data.length;i++){periodo.push(data.data[i][0])}
         
         for(let h=1;h<data.meta.length;h++){
-            for(let k=inicio;k<data.count;k++){
+            for(let k=inicio;k<data.data.length;k++){
                 let single=data.data[k][h]
                 arr_int.push(single)
                 // arr_int.push(parseFloat((single).toFixed(1)))
@@ -33,7 +31,7 @@ const getData = async(url,etiq,varPor) => {
             }
             series.push(conj)
         } 
-        console.log(series,periodo.length)
+    
         let meta = {
             frecuencia: data.meta[0].frequency,
             titulo: data.meta[1].distribution.title,

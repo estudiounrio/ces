@@ -62,7 +62,7 @@ document.getElementById('navig').addEventListener('click', function(e){
         if(e.target.textContent===' Empleo Formal'){ crea(4) }
         if(e.target.textContent===' Empleo Formal Provincial'){ crea(5) }
         if(e.target.textContent===' Comercio Exterior'){ crea(3)}
-        if(e.target.textContent===' Precios'){ crea(4) }
+        if(e.target.textContent===' Precios'){ crea(2) }
         contenedor.appendChild(fragment)
         
     }

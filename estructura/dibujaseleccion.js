@@ -124,7 +124,7 @@ const dibujaSeleccion = (seleccion) => {
         Graficar(dt.empleo.empleo_hac_bs_sinest,tg[5],true,'bar','anual','Variación respecto al mismo mes del año anterior','Variación %')
         Graficar(dt.empleo.empleo_hac_ss_sinest,tg[6],true,'line','','Empleo Asalariado Privado. Sectores de Servicios.','Ministerio de Hacienda')
         Graficar(dt.empleo.empleo_hac_ss_sinest,tg[7],true,'bar','anual','Variación respecto al mismo mes del año anterior','Variación %')
-            }
+    }
 
     if(seleccion===' Empleo Formal Provincial') {
  

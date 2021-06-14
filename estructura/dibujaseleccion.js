@@ -90,6 +90,8 @@ const dt  = {
         'ipc':'173.1_ECIONALLES_DIC-_0_12,173.1_INUCLEOLEO_DIC-_0_10,173.1_RLADOSDOS_DIC-_0_9',
         'ipc_ng' : '148.3_INIVELNAL_DICI_M_26,147.3_IBIENESNAL_DICI_T_19,147.3_ISERVICNAL_DICI_T_22',
 
+        'canasta' : '150.1_CSTA_BARIA_0_D_26,150.1_CSTA_BATAL_0_D_20,150.1_LA_INDICIA_0_D_16,150.1_LA_POBREZA_0_D_13',
+
         // PRECIOS MAYORISTAS
         'sipim' : '450.1_NIVEL_GENERAL_0_0_13_92,448.1_NIVEL_GENERAL_0_0_13_46,449.1_NIVEL_GENERAL_0_0_13_97'
     }
@@ -158,14 +160,14 @@ const dibujaSeleccion = (seleccion) => {
     if(seleccion===' Precios') {
         Graficar(dt.inflacion.ipc_ng,tg[0],true,'','','IPC-Nacional. Nivel General','Índice Base= 2016. INDEC')
         Graficar(dt.inflacion.ipc_ng,tg[1],true,'','anualymensual','IPC-Nacional. Nivel General','Variación %')
-        // Graficar(dt.inflacion.ipc,tg[2],false,'','','IPC-Nacional. Nivel General','Índice Base= 2016. INDEC')
-        // Graficar(dt.inflacion.ipc,tg[3],false,'','anualymensual','IPC-Nacional. Nivel General','Variación %')
-        Graficar(dt.inflacion.pr2,tg[2],true,'','','IPC-Nacional. Nivel General. Divisiones','Índice Base= 2016. INDEC')
-        Graficar(dt.inflacion.pr2,tg[3],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones','Variación %')
-        Graficar(dt.inflacion.pr3,tg[4],true,'','','IPC-Nacional. Nivel General. Divisiones (Cont.)','Índice Base= 2016. INDEC')
-        Graficar(dt.inflacion.pr3,tg[5],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones (Cont.)','Variación %')
-        // Graficar(dt.inflacion.sipim,tg[6],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
-        // Graficar(dt.inflacion.sipim,tg[7],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
+        Graficar(dt.inflacion.ipc,tg[2],false,'','','IPC-Nacional. Nivel General','Variación % menual. INDEC')
+        Graficar(dt.inflacion.canasta,tg[3],false,'','','Canasta Básica y Línea de Indigencia','Pesos corrientes')
+        Graficar(dt.inflacion.pr2,tg[4],true,'','','IPC-Nacional. Nivel General. Divisiones','Índice Base= 2016. INDEC')
+        Graficar(dt.inflacion.pr2,tg[5],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones','Variación %')
+        Graficar(dt.inflacion.pr3,tg[6],true,'','','IPC-Nacional. Nivel General. Divisiones (Cont.)','Índice Base= 2016. INDEC')
+        Graficar(dt.inflacion.pr3,tg[7],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones (Cont.)','Variación %')
+        Graficar(dt.inflacion.sipim,tg[8],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
+        Graficar(dt.inflacion.sipim,tg[9],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
     }
 }
 

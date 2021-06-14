@@ -31,7 +31,7 @@ const getData = async(url,etiq,varPor) => {
             }
             series.push(conj)
         } 
-    
+        
         let meta = {
             frecuencia: data.meta[0].frequency,
             titulo: data.meta[1].distribution.title,

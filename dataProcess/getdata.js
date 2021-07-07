@@ -16,8 +16,8 @@ const getData = async(url,etiq,varPor) => {
         for(let h=1;h<data.meta.length;h++){
             for(let k=inicio;k<data.data.length;k++){
                 let single=data.data[k][h]
-                arr_int.push(single)
-                // arr_int.push(parseFloat((single).toFixed(1)))
+                // arr_int.push(single)
+                arr_int.push(parseFloat((single).toFixed(1)))
             }
             serie.push(arr_int)
             arr_int=[]
@@ -45,6 +45,42 @@ const getData = async(url,etiq,varPor) => {
     } catch (error) {
         console.log(error)
     }
+}
+
+const getDataJson = async(let1,let2) => {
+
+    try {
+        const file = let1
+        const file_ = let2
+
+        const datos_ = await fetch(`data/${file}.json`)
+        const datos__ = await datos_.json();
+        const data_ = datos__[file_]
+
+        const dt = []
+        const oBName = Object.keys(data_.Data)
+        const oBData = Object.values(data_.Data)
+        const oBLength = oBName.length
+        
+        for(let i =0; i<oBLength; i++){
+            for(let j=0;j<oBName.length;j++){
+                if(oBName[i]===oBName[j]){
+                    const sr = {
+                        name: oBName[i],
+                        data: oBData[i],
+                        periodo: data_.Período
+                    }
+                    dt.push(sr)
+                }
+            }
+        }
+        
+        return dt
+    
+    } catch(error) {
+        console.log(error)
+    }
+
 }
 
 const fechas = (periodo,frecuencia) => {

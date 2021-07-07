@@ -14,6 +14,23 @@ const Graficar = (url,container,etiq,tipo='line',varPor,titulo,subtitulo) => {
     ).catch( error => console.log(error))
 }
 
+const GraficarJson = (let1,let2,container,etiq,tipo='line',varPor,titulo,subtitulo) => {
+    const grafico = getDataJson(let1,let2)
+    grafico.then( 
+        res => 
+        Highcharts.chart( {
+            chart: {
+                renderTo:container,
+                type:varPor ? 'bar' : tipo
+            },
+            title: { text:titulo },
+            subtitle:{ text: subtitulo },
+            xAxis: { categories: res[0].periodo },
+            series: res
+        })
+    ).catch( error => console.log(error))
+}
+
 ////// ESTILOS HIGHCHART ///////
 Highcharts.theme = {
     // colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',   
@@ -112,5 +129,6 @@ Highcharts.theme = {
     // }
 
 };
+
 // Apply the theme
 Highcharts.setOptions(Highcharts.theme);

@@ -14,7 +14,6 @@ const MapaEmpleo = (url,container,etiq,varPor,titulo,subtitulo) => {
     ).catch( error => console.log(error))
 }
 
-
 const mp = (empl,contenedor,titulo,subtitulo) => {
     
     const m = document.getElementById(contenedor)

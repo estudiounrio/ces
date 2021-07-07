@@ -24,31 +24,36 @@ document.getElementById('navig').addEventListener('click', function(e){
 
     if(e.target.name==='Sectores Productivos'){
         navContenedor.innerHTML = `
-        <h5>${e.target.name}</h5>
-        <select id="nav_select" class="form-select" aria-label="Default select example">
-            <option selected disabled>Selecciones Sector</option>
-            <option value="uci">Utilización de la Capacidad Instalada</option>
-            <option value="nivelgral">IPI Nivel General</option>
-            <option value="ipi_sub_alybeb">Alimentos y bebidas</option>
-            <option value="ipi_sub_alybeb_cont">Alimentos y bebidas (cont.)</option>
-            <option value="ipi_sub_tabaco">Productos de tabaco</option>
-            <option value="ipi_sub_textil">Productos textiles</option>
-            <option value="ipi_sub_vestycalz">Prendas de vestir, cuero y calzado</option>
-            <option value="ipi_sub_madepapeimp">Madera, papel, edición e impresión</option>
-            <option value="ipi_sub_refin">Refinación del petróleo, coque y combustible nuclear</option>
-            <option value="ipi_sub_sustquim">Sustancias y productos químicos</option>
-            <option value="ipi_sub_cauyplast">Productos de caucho y plástico</option>
-            <option value="ipi_sub_nometalicos">Productos minerales no metálicos</option>
-            <option value="ipi_sub_metbasicas">Industrias metálicas básicas</option>
-            <option value="ipi_sub_metal">Productos de metal</option>
-            <option value="ipi_sub_maqyequip">Maquinaria y equipo</option>
-            <option value="ipi_sub_otrosequip">Otros equipos, aparatos e instrumentos</option>
-            <option value="ipi_sub_vehiculos">Vehículos, carrocerías, remolques y autopartes</option>
-            <option value="ipi_sub_otrostransp">Otro equipo de transporte</option>
-            <option value="ipi_sub_mueblesyresto">Muebles y colchones, y otras industrias manufactureras</option>
-        </select>       
-        <hr/>
+        <div class="col-md-6">
+            <h5>${e.target.name}</h5>
+        </div>
+        <div class="col-md-6">
+            <select id="nav_select" class="form-select" aria-label="Default select example">
+                <option selected disabled>Selecciones Sector</option>
+                
+                <option value="nivelgral">IPI Nivel General</option>
+                <option value="ipi_sub_alybeb">Alimentos y bebidas</option>
+                <option value="ipi_sub_alybeb_cont">Alimentos y bebidas (cont.)</option>
+                <option value="ipi_sub_tabaco">Productos de tabaco</option>
+                <option value="ipi_sub_textil">Productos textiles</option>
+                <option value="ipi_sub_vestycalz">Prendas de vestir, cuero y calzado</option>
+                <option value="ipi_sub_madepapeimp">Madera, papel, edición e impresión</option>
+                <option value="ipi_sub_refin">Refinación del petróleo, coque y combustible nuclear</option>
+                <option value="ipi_sub_sustquim">Sustancias y productos químicos</option>
+                <option value="ipi_sub_cauyplast">Productos de caucho y plástico</option>
+                <option value="ipi_sub_nometalicos">Productos minerales no metálicos</option>
+                <option value="ipi_sub_metbasicas">Industrias metálicas básicas</option>
+                <option value="ipi_sub_metal">Productos de metal</option>
+                <option value="ipi_sub_maqyequip">Maquinaria y equipo</option>
+                <option value="ipi_sub_otrosequip">Otros equipos, aparatos e instrumentos</option>
+                <option value="ipi_sub_vehiculos">Vehículos, carrocerías, remolques y autopartes</option>
+                <option value="ipi_sub_otrostransp">Otro equipo de transporte</option>
+                <option value="ipi_sub_mueblesyresto">Muebles y colchones, y otras industrias manufactureras</option>
+            </select> 
+        </div> 
+        <hr class="mt-3">
         `
+// <option value="uci">Utilización de la Capacidad Instalada</option>
         borr()
 
     } else { 
@@ -60,9 +65,14 @@ document.getElementById('navig').addEventListener('click', function(e){
         if(e.target.textContent===' Actividad Económica'){ crea(3)}
         if(e.target.textContent===' Demanda y Oferta Global'){ crea(2) }
         if(e.target.textContent===' Empleo Formal'){ crea(4) }
-        if(e.target.textContent===' Empleo Formal Provincial'){ crea(5) }
+        if(e.target.textContent===' Empleo Provincial'){ crea(5) }
         if(e.target.textContent===' Comercio Exterior'){ crea(3)}
-        if(e.target.textContent===' Precios'){ crea(5) }
+        if(e.target.textContent===' Precios'){ crea(4) }
+        if(e.target.textContent===' Canasta Básica'){ crea(2) }
+        if(e.target.textContent===' Brechas Tecnológicas'){ crea(2) }
+        if(e.target.textContent===' Capacidad Instalada'){ 
+            fragment.appendChild(creadiv_cabecera())
+            crea(2) }
         contenedor.appendChild(fragment)
         
     }
@@ -120,6 +130,11 @@ document.getElementById('nav-contenedor').addEventListener('change', function(e)
     contenedor.appendChild(fragment)
 
     drawSectoresProductivos(vl)
+
+    const ct = document.getElementById('nav_select')
+    
+    console.log(ct)
+
     
 })
 
@@ -143,3 +158,17 @@ const container_h = ( ) => {
 }
 
 
+const creadiv_cabecera = () => {
+    let dv= document.createElement('div')
+    dv.classList.add('col-lg-12')
+    dv.classList.add('d-flex')
+    dv.classList.add('justify-content-center')
+    let identificador = 'cabecera'
+    const dv_int = document.createElement('div')
+    // dv_int.classList.add('ancho')
+    // dv_int.setAttribute('id',identificador)
+    // dv.appendChild(dv_int)
+    return dv
+}
+
+console.log(creadiv_cabecera())

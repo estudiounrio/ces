@@ -78,7 +78,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">El <b>Centro de Estudios Socio Productivos UNRIO</b> pone a disposición de la comunidad este proyecto de visualización de datos públicos, con el objetivo de democratizar el acceso y facilitar la lectura de datos relacionados con el sistema productivo. Sumate y ayudanos a darle forma a esta propuesta.</div>
+                        <div class="accordion-body">El <b>Centro de Estudios Socio Productivos UNRIO</b> pone a disposición de la comunidad este proyecto de visualización de datos públicos, con el objetivo de democratizar el acceso a la información y facilitar la lectura de datos relacionados con el sistema productivo. <br> <b><i>Sumate y ayudanos a darle forma a esta propuesta.</i></b></div>
                       </div>
                     </div>
                 </div> 
@@ -89,10 +89,16 @@
                     <a class="nav-link text-muted" href="#contenedor" name="Demanda y Oferta Global"><i class="bi bi-clipboard-check"></i> Demanda y Oferta Global</a>
                     <a class="nav-link text-muted" href="#contenedor" name="Sectores Productivos"><i class="bi bi-building"></i> Sectores Productivos</a>
                     <a class="nav-link text-muted" href="#contenedor" name="Empleo Formal"><i class="bi bi-person"></i> Empleo Formal</a>
-                    <a class="nav-link text-muted" href="#contenedor" name="Empleo Formal Provincial"><i class="bi bi-person"></i> Empleo Formal Provincial</a>
                     <a class="nav-link text-muted" href="#contenedor" name="Comercio Exterior"><i class="bi bi-globe"></i> Comercio Exterior</a>
                     <a class="nav-link text-muted" href="#contenedor" name="Precios"><i class="bi bi-cart2"></i> Precios</a>
-                <hr>
+                    <hr>
+                <h6 class="px-3 mb-1 ocultar-div">Informes</h6>
+                    <a class="nav-link text-muted ocultar-div" href="#" name="Empleo Formal Provincial"><i class="bi bi-person-plus"></i> Empleo Provincial</a>
+                    <a class="nav-link text-muted ocultar-div" href="#" name="Canasta Básica"><i class="bi bi-basket"></i> Canasta Básica</a>
+                    <a class="nav-link text-muted ocultar-div" href="#" name="Brechas Tecnológicas"><i class="bi bi-globe2"></i> Brechas Tecnológicas</a>
+                    <a class="nav-link text-muted ocultar-div" href="#" name=" Utilización de la Capacidad Instalada"><i class="bi bi-gear"></i> Capacidad Instalada</a>
+
+                    <hr class="ocultar-div">
                 </div>
 
                 <div id="warn" class="ocultar-div">
@@ -110,9 +116,12 @@
                     <iframe class="ocultar-div" height="auto" width="100%" src="https://www.youtube.com/embed/CmQNGPAyC2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <hr class="ocultar-div">
                 </div>
+                <div class="alert alert-danger mostrar-div">
+                    Encontrá más informes y series disponibles en la versión de escritorio <i class="bi bi-laptop"></i>
+                </div>
             </aside>
             <section class="col-md-9">
-                <div id="nav-contenedor"></div>
+                <div id="nav-contenedor" class="row"></div>
                 <div id="contenedor"></div>
                 <div id="warn-contain"></div>
             <div class="container">    
@@ -195,7 +204,7 @@
     </template>
     <hr>
     <footer class="footer container-fluid d-flex justify-content-between align-items-start">
-        <img src="img/letrasNegras-footer.svg" alt="">
+        <img height="85vh" src="img/letrasNegras-footer_produccion.svg" alt="Estudio UNRIO">
         <a href="#" class="text-muted"><i class="bi bi-arrow-up-circle flecha"></i></a>
     </footer>
 
@@ -223,6 +232,7 @@
     <!-- <script>
         document.getElementById('inicio').addEventListener('click', e => alert('No tiene suficientes permisos para ingresar a la localización solicitada'))
     </script> -->
+    
 
 </body>
 </html>

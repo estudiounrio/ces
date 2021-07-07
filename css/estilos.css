@@ -69,9 +69,17 @@
     background-color: purple;
 }
 
+.mostrar-div {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
-    .ocultar-div{
-    display:none;
+    .ocultar-div {
+        display:none;
+    }
+    .mostrar-div {
+        display: block;
+
     }
 }
 

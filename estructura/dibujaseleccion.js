@@ -40,7 +40,6 @@ const dt  = {
 
 // IPI: IPI Divisiones y Subclases, Índice 2004 : 100    
     'ipi_obj' : {
-
             'ipi':'453.1_SERIE_ORIGNAL_0_0_14_46,453.1_SERIE_DESEADA_0_0_24_58,453.1_SERIE_TENDCLO_0_0_21_61',
             'ipi_div': '453.1_SERIE_ORIGNAL_0_0_14_46,453.2_ALIMENTOS_DAS_0_0_17_18,453.2_PRODUCTOS_ACO_0_0_16_81,453.2_PRODUCTOS_LES_0_0_18_32,453.2_PRENDAS_VEADO_0_0_28_88,453.2_MADERA_PAPION_0_0_30_66,453.2_REFINACIONEAR_0_0_45_82,453.2_SUSTANCIASCOS_0_0_29_82,453.2_PRODUCTOS_ICO_0_0_25_26,453.2_PRODUCTOS_COS_0_0_32_70,453.2_INDUSTRIASCAS_0_0_28_0,453.2_PRODUCTOS_TAL_0_0_15_15,453.2_MAQUINARIAIPO_0_0_17_14,453.2_OTROS_EQUITOS_0_0_35_77,453.2_VEHICULOS_TES_0_0_54_37,453.2_OTRO_EQUIPRTE_0_0_25_29,453.2_MUEBLES_CORAS_0_0_49_35',
             'ipi_sub_alybeb' : '453.2_ALIMENTOS_DAS_0_0_17_18,453.2_CARNE_VACUUNA_0_0_12_53,453.2_CARNE_AVIAIAR_0_0_11_85,453.2_FIAMBRES_EDOS_0_0_18_46,453.2_PREPARACIORES_0_0_39_24,453.2_MOLIENDA_OSAS_0_0_20_8,453.2_PRODUCTOS_EOS_0_0_17_89,453.2_MOLIENDA_CLES_0_0_17_71',
@@ -78,7 +77,6 @@ const dt  = {
             'ipi_proxi_vehiculos':'453.2_VEHICULOS_TES_0_0_54_37,453.1_SERIE_ORIGNAL_0_0_14_46',
             'ipi_proxi_otrostransp':'453.2_OTRO_EQUIPRTE_0_0_25_29,453.1_SERIE_ORIGNAL_0_0_14_46',
             'ipi_proxi_mueblesyresto':'453.2_MUEBLES_CORAS_0_0_49_35,453.1_SERIE_ORIGNAL_0_0_14_46'
-        
         },
 
 // INFLACIÓN
@@ -90,11 +88,19 @@ const dt  = {
         'ipc':'173.1_ECIONALLES_DIC-_0_12,173.1_INUCLEOLEO_DIC-_0_10,173.1_RLADOSDOS_DIC-_0_9',
         'ipc_ng' : '148.3_INIVELNAL_DICI_M_26,147.3_IBIENESNAL_DICI_T_19,147.3_ISERVICNAL_DICI_T_22',
 
-        'canasta' : '150.1_CSTA_BARIA_0_D_26,150.1_CSTA_BATAL_0_D_20,150.1_LA_INDICIA_0_D_16,150.1_LA_POBREZA_0_D_13',
+        'canasta' : '150.1_CSTA_BARIA_0_D_26,150.1_CSTA_BATAL_0_D_20',
+        'indigencia' : '150.1_LA_INDICIA_0_D_16,150.1_LA_POBREZA_0_D_13',
 
         // PRECIOS MAYORISTAS
         'sipim' : '450.1_NIVEL_GENERAL_0_0_13_92,448.1_NIVEL_GENERAL_0_0_13_46,449.1_NIVEL_GENERAL_0_0_13_97'
+    },
+
+
+    'uci' : {
+        'uci' : '31.3_UNG_2004_M_18,31.3_UPAB_2004_M_35,31.3_UPT_2004_M_21,31.3_UPT_2004_M_23,31.3_UPC_2004_M_17,31.3_UEI_2004_M_22,31.3_URP_2004_M_24',
+        'uci_' : '31.3_UNG_2004_M_18,31.3_USPQ_2004_M_34,31.3_UCP_2004_M_20,31.3_UMNM_2004_M_27,31.3_UIMB_2004_M_33,31.3_UV_2004_M_25,31.3_UMNIA_2004_M_42'
     }
+
 }
 
 const dibujaSeleccion = (seleccion) => {
@@ -118,17 +124,17 @@ const dibujaSeleccion = (seleccion) => {
       }
 
     if(seleccion===' Empleo Formal') {
-        Graficar(dt.empleo.empleo_oede,tg[0],true,'','','Empleo Asalariado Total','OEDE. Ministerio de Trabajo de la Nación')
-        Graficar(dt.empleo.empleo_oede,tg[1],true,'','anualymensual','Empleo Asalariado Total','Variación %')
-        Graficar(dt.empleo.empleo_oede_bsyss,tg[2],true,'area','','Empleo Asalariado. Por Sectores','OEDE. Ministerio de Trabajo de la Nación')
-        Graficar(dt.empleo.empleo_oede_bsyss,tg[3],true,'bar','anual','Empleo Asalariado. Por Sectores','Variación %')
-        Graficar(dt.empleo.empleo_hac_bs_sinest,tg[4],true,'line','','Empleo Asalariado Privado. Sectores de Bienes.','Ministerio de Hacienda')
+        Graficar(dt.empleo.empleo_oede,tg[0],true,'','','Empleo Asalariado Privado Total','Cantidad de personas. OEDE. Ministerio de Trabajo de la Nación')
+        Graficar(dt.empleo.empleo_oede,tg[1],true,'','anualymensual','Empleo Asalariado Privado Total','Variación %')
+        Graficar(dt.empleo.empleo_oede_bsyss,tg[2],true,'area','','Empleo Asalariado Privado. Por Sectores','Cantidad de personas. OEDE. Ministerio de Trabajo de la Nación')
+        Graficar(dt.empleo.empleo_oede_bsyss,tg[3],true,'bar','anual','Empleo Asalariado Privado. Por Sectores','Variación %')
+        Graficar(dt.empleo.empleo_hac_bs_sinest,tg[4],true,'line','','Empleo Asalariado Privado. Sectores de Bienes.','Cantidad de personas. Ministerio de Hacienda')
         Graficar(dt.empleo.empleo_hac_bs_sinest,tg[5],true,'bar','anual','Variación respecto al mismo mes del año anterior','Variación %')
-        Graficar(dt.empleo.empleo_hac_ss_sinest,tg[6],true,'line','','Empleo Asalariado Privado. Sectores de Servicios.','Ministerio de Hacienda')
+        Graficar(dt.empleo.empleo_hac_ss_sinest,tg[6],true,'line','','Empleo Asalariado Privado. Sectores de Servicios.','Cantidad de personas. Ministerio de Hacienda')
         Graficar(dt.empleo.empleo_hac_ss_sinest,tg[7],true,'bar','anual','Variación respecto al mismo mes del año anterior','Variación %')
     }
 
-    if(seleccion===' Empleo Formal Provincial') {
+    if(seleccion===' Empleo Provincial') {
  
         MapaEmpleo(dt.empleo_provincial.empleo_hac_prov_sinest_pampeana,tg[0],true,'','Región Pampeana. En miles de personas','pampeana')
         Graficar(dt.empleo_provincial.empleo_hac_prov_sinest_pampeana,tg[1],true,'','anual','Región Pampeana. Empleo Asalariado Privado','Variación %')
@@ -160,15 +166,37 @@ const dibujaSeleccion = (seleccion) => {
     if(seleccion===' Precios') {
         Graficar(dt.inflacion.ipc_ng,tg[0],true,'','','IPC-Nacional. Nivel General','Índice Base= 2016. INDEC')
         Graficar(dt.inflacion.ipc_ng,tg[1],true,'','anualymensual','IPC-Nacional. Nivel General','Variación %')
-        Graficar(dt.inflacion.ipc,tg[2],false,'','','IPC-Nacional. Nivel General','Variación % menual. INDEC')
-        Graficar(dt.inflacion.canasta,tg[3],false,'','','Canasta Básica y Línea de Indigencia','Pesos corrientes')
-        Graficar(dt.inflacion.pr2,tg[4],true,'','','IPC-Nacional. Nivel General. Divisiones','Índice Base= 2016. INDEC')
-        Graficar(dt.inflacion.pr2,tg[5],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones','Variación %')
-        Graficar(dt.inflacion.pr3,tg[6],true,'','','IPC-Nacional. Nivel General. Divisiones (Cont.)','Índice Base= 2016. INDEC')
-        Graficar(dt.inflacion.pr3,tg[7],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones (Cont.)','Variación %')
-        Graficar(dt.inflacion.sipim,tg[8],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
-        Graficar(dt.inflacion.sipim,tg[9],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
+        // Graficar(dt.inflacion.ipc,tg[2],false,'','','IPC-Nacional. Nivel General','Variación % menual. INDEC')
+        Graficar(dt.inflacion.pr2,tg[2],true,'','','IPC-Nacional. Nivel General. Divisiones','Índice Base= 2016. INDEC')
+        Graficar(dt.inflacion.pr2,tg[3],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones','Variación %')
+        Graficar(dt.inflacion.pr3,tg[4],true,'','','IPC-Nacional. Nivel General. Divisiones (Cont.)','Índice Base= 2016. INDEC')
+        Graficar(dt.inflacion.pr3,tg[5],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones (Cont.)','Variación %')
+        Graficar(dt.inflacion.sipim,tg[6],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
+        Graficar(dt.inflacion.sipim,tg[7],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
     }
+
+    if(seleccion===' Canasta Básica') {
+        Graficar(dt.inflacion.canasta,tg[0],false,'','','Canasta Básica','Pesos corrientes. INDEC')
+        Graficar(dt.inflacion.canasta,tg[1],false,'','anualymensual','Canasta Básica','Variación %')
+        Graficar(dt.inflacion.indigencia,tg[2],false,'','','Pobreza e Indigencia','Pesos corrientes. INDEC')
+        Graficar(dt.inflacion.indigencia,tg[3],false,'','anualymensual','Pobreza e Indigencia','Variación %')
+   }
+
+    if(seleccion===' Brechas Tecnológicas') {
+        GraficarJson('comex','totales',tg[0],true,'','','Comercio Exterior Argentino','En millones de dólares')
+        GraficarJson('comex','saldo comercial',tg[1],true,'column','','Saldo comercial según su Contenido Tecnológico','En millones de dólares')
+        GraficarJson('comex','exportaciones',tg[2],true,'area','','Exportaciones según su Contenido Tecnológico','En millones de dólares')
+        GraficarJson('comex','importaciones',tg[3],true,'area','','Importaciones según su Contenido Tecnológico','En millones de dólares')
+    }
+
+    if(seleccion===' Capacidad Instalada') {
+        console.log(dt.uci.uci_)
+        Graficar(dt.uci.uci,tg[0],true,'','','UCI. Nivel General y bloques.','Como % de la capacidad total del sector. INDEC')
+        Graficar(dt.uci.uci,tg[1],true,'bar','anual','UCI. Nivel General y bloques','Variación %')
+        Graficar(dt.uci.uci_,tg[2],true,'','','UCI. Nivel General y bloques (Cont.)','Como % de la capacidad total del sector. INDEC')
+        Graficar(dt.uci.uci_,tg[3],true,'bar','anual','UCI. Nivel General y bloques (Cont.)','Variación %')
+    }
+
 }
 
 document.getElementById('warn').addEventListener('click', function(e){

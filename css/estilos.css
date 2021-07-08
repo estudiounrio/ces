@@ -79,7 +79,10 @@
     }
     .mostrar-div {
         display: block;
+    }
 
+    footer > img {
+        height: 65%;
     }
 }
 
@@ -87,3 +90,6 @@
     color: tomato;
 
 }
+
+
+

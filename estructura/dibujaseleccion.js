@@ -190,11 +190,11 @@ const dibujaSeleccion = (seleccion) => {
     }
 
     if(seleccion===' Capacidad Instalada') {
-        console.log(dt.uci.uci_)
         Graficar(dt.uci.uci,tg[0],true,'','','UCI. Nivel General y bloques.','Como % de la capacidad total del sector. INDEC')
         Graficar(dt.uci.uci,tg[1],true,'bar','anual','UCI. Nivel General y bloques','Variación %')
         Graficar(dt.uci.uci_,tg[2],true,'','','UCI. Nivel General y bloques (Cont.)','Como % de la capacidad total del sector. INDEC')
         Graficar(dt.uci.uci_,tg[3],true,'bar','anual','UCI. Nivel General y bloques (Cont.)','Variación %')
+        // descr(seleccion)
     }
 
 }
@@ -225,3 +225,25 @@ document.getElementById('warn').addEventListener('click', function(e){
    close(el)
    
 })
+
+
+// const dc = {
+//     'uci' : `La utilización de la capacidad instalada mide el % de bla bla bla del bla bla bla en el parrafo
+//     La utilización de la capacidad instalada mide el % de bla bla bla del bla bla bla en el parrafo
+//     La utilización de la capacidad instalada mide el % de bla bla bla del bla bla bla en el parrafo
+//     La utilización de la capacidad instalada mide el % de bla bla bla del bla bla bla en el parrafo
+//     La utilización de la capacidad instalada mide el % de bla bla bla del bla bla bla en el parrafo
+//     La utilización de la capacidad instalada mide el % de bla bla bla del bla bla bla en el parrafo
+//     `
+// }
+
+// const descr = (el) => {
+//     const elementP = document.getElementById('descripcion')
+   
+//     if(el===' Capacidad Instalada') { 
+//         elementP.innerHTML = dc.uci
+    
+//     }
+
+// }
+

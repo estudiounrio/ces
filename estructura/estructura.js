@@ -2,20 +2,28 @@
 const borr = () =>  {
     let del = document.querySelector('#contenedor')
     let del_i =del.querySelectorAll('.row')
+    let del_j= del.querySelector('.descripcion')
+
+
     if(del_i.length>0) {
         for(let i=0;i<del_i.length;i++){
             del.removeChild(del_i[i])
         }
     }
+    if(del_j) {del_j.remove()}
 }
 
 // AGREGA EL DIV=CONTENEDOR Y EL NAV-CONTENEDOR
 const navContenedor = document.getElementById('nav-contenedor')
-document.getElementById('navig').addEventListener('click', function(e){
+const divContenedor = document.getElementById('navig')
+
+divContenedor.addEventListener('click', function(e){
     if (document.getElementById('warn-contain').firstChild){
         document.getElementById('warn-contain').innerHTML=''
     }
+
     const crea = n => {
+        // fragment.appendChild(creadiv_cabecera())
         for (let i=1;i<=n;i++){
             const f = ft()
             fragment.appendChild(f)
@@ -70,9 +78,7 @@ document.getElementById('navig').addEventListener('click', function(e){
         if(e.target.textContent===' Precios'){ crea(4) }
         if(e.target.textContent===' Canasta Básica'){ crea(2) }
         if(e.target.textContent===' Brechas Tecnológicas'){ crea(2) }
-        if(e.target.textContent===' Capacidad Instalada'){ 
-            fragment.appendChild(creadiv_cabecera())
-            crea(2) }
+        if(e.target.textContent===' Capacidad Instalada'){ crea(2) }
         contenedor.appendChild(fragment)
         
     }
@@ -158,17 +164,27 @@ const container_h = ( ) => {
 }
 
 
+// Crea el div de la descripción
 const creadiv_cabecera = () => {
     let dv= document.createElement('div')
     dv.classList.add('col-lg-12')
     dv.classList.add('d-flex')
     dv.classList.add('justify-content-center')
-    let identificador = 'cabecera'
+    dv.classList.add('descripcion')
+    dv.classList.add('card')
+    dv.classList.add('mb-4')
+    let identificador = 'descripcion'
+    
     const dv_int = document.createElement('div')
-    // dv_int.classList.add('ancho')
-    // dv_int.setAttribute('id',identificador)
-    // dv.appendChild(dv_int)
+    dv.classList.add('card-body')
+    dv_int.setAttribute('id',identificador)
+
+    dv.appendChild(dv_int)
     return dv
+
 }
 
-console.log(creadiv_cabecera())
+
+
+
+

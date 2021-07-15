@@ -163,7 +163,7 @@ const dibujaSeleccion = (seleccion) => {
         Graficar(dt.comex.impo,tg[5],true,'bar','anual','Importaciones Totales. Usos Económicos','Variación %')
     }
 
-    if(seleccion===' Precios') {
+    if(seleccion===' Precios Minoristas') {
         Graficar(dt.inflacion.ipc_ng,tg[0],true,'','','IPC-Nacional. Nivel General','Índice Base= 2016. INDEC')
         Graficar(dt.inflacion.ipc_ng,tg[1],true,'','anualymensual','IPC-Nacional. Nivel General','Variación %')
         // Graficar(dt.inflacion.ipc,tg[2],false,'','','IPC-Nacional. Nivel General','Variación % menual. INDEC')
@@ -171,8 +171,6 @@ const dibujaSeleccion = (seleccion) => {
         Graficar(dt.inflacion.pr2,tg[3],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones','Variación %')
         Graficar(dt.inflacion.pr3,tg[4],true,'','','IPC-Nacional. Nivel General. Divisiones (Cont.)','Índice Base= 2016. INDEC')
         Graficar(dt.inflacion.pr3,tg[5],true,'','anualymensual','IPC-Nacional. Nivel General. Divisiones (Cont.)','Variación %')
-        Graficar(dt.inflacion.sipim,tg[6],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
-        Graficar(dt.inflacion.sipim,tg[7],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
     }
 
     if(seleccion===' Canasta Básica') {
@@ -195,6 +193,11 @@ const dibujaSeleccion = (seleccion) => {
         Graficar(dt.uci.uci_,tg[2],true,'','','UCI. Nivel General y bloques (Cont.)','Como % de la capacidad total del sector. INDEC')
         Graficar(dt.uci.uci_,tg[3],true,'bar','anual','UCI. Nivel General y bloques (Cont.)','Variación %')
         // descr(seleccion)
+    }
+
+    if(seleccion===' Precios Mayoristas') {
+        Graficar(dt.inflacion.sipim,tg[0],false,'','','Sistema de Índices de Precios Mayoristas','Índice Base= Dic 2015. INDEC. Nota: el celeste es el Indice de precios básicos del productor (IPP)')
+        Graficar(dt.inflacion.sipim,tg[1],false,'','anualymensual','Sistema de Índices de Precios Mayoristas','Variación %')
     }
 
 }

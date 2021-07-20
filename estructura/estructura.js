@@ -138,11 +138,7 @@ document.getElementById('nav-contenedor').addEventListener('change', function(e)
 
     drawSectoresProductivos(vl)
 
-    const ct = document.getElementById('nav_select')
-    
-    console.log(ct)
-
-    
+  
 })
 
 const container_h = ( ) => {

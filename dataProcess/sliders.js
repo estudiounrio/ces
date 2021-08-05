@@ -19,6 +19,12 @@ document.getElementById('diapositivasDerecha').innerHTML = diapo('derecha',7)
 document.getElementById('diapositivasDerecha_abajo').innerHTML = diapo('derecha_abajo',4)
 document.getElementById('diapositivasIzquierda_abajo').innerHTML = diapo('izquierda_abajo',4)
 
+
+document.getElementById('diapositivasDerechaCoyuntural').innerHTML = diapo('coyuntural_derecha',4)
+document.getElementById('diapositivasDerechaCoyuntural_abajo').innerHTML = diapo('coyuntural_derecha-abajo',3)
+document.getElementById('diapositivasIzquierdaCoyuntural').innerHTML = diapo('coyuntural_izquierda',3)
+document.getElementById('diapositivasIzquierdaCoyuntural_abajo').innerHTML = diapo('coyuntural_Izquierda-abajo',4)
+
 document.getElementById('cerrar').addEventListener('click', e =>
     document.getElementById('slider').innerHTML = ''
 )

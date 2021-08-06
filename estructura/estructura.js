@@ -39,7 +39,7 @@ divContenedor.addEventListener('click', function(e){
             <select id="nav_select" class="form-select" aria-label="Default select example">
                 <option selected disabled>Selecciones Sector</option>
                 
-                <option value="nivelgral">IPI Nivel General</option>
+
                 <option value="ipi_sub_alybeb">Alimentos y bebidas</option>
                 <option value="ipi_sub_alybeb_cont">Alimentos y bebidas (cont.)</option>
                 <option value="ipi_sub_tabaco">Productos de tabaco</option>
@@ -62,7 +62,9 @@ divContenedor.addEventListener('click', function(e){
         <hr class="mt-3">
         `
 // <option value="uci">Utilización de la Capacidad Instalada</option>
-        borr()
+//<option value="nivelgral">IPI Nivel General</option> 
+       
+       borr()
 
     } else { 
         navContenedor.innerHTML = `
@@ -72,6 +74,7 @@ divContenedor.addEventListener('click', function(e){
         borr()
         if(e.target.textContent===' Actividad Económica'){ crea(3)}
         if(e.target.textContent===' Demanda y Oferta Global'){ crea(2) }
+        if(e.target.textContent===' Industria Manufacturera'){ crea(3) }
         if(e.target.textContent===' Empleo Formal'){ crea(4) }
         if(e.target.textContent===' Empleo Provincial'){ crea(5) }
         if(e.target.textContent===' Comercio Exterior'){ crea(3)}

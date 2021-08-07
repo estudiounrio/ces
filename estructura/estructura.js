@@ -74,7 +74,7 @@ divContenedor.addEventListener('click', function(e){
         borr()
         if(e.target.textContent===' Actividad Económica'){ crea(3)}
         if(e.target.textContent===' Demanda y Oferta Global'){ crea(2) }
-        if(e.target.textContent===' Industria Manufacturera'){ crea(3) }
+        if(e.target.textContent===' Industria Manufacturera'){ crea(4) }
         if(e.target.textContent===' Empleo Formal'){ crea(4) }
         if(e.target.textContent===' Empleo Provincial'){ crea(5) }
         if(e.target.textContent===' Comercio Exterior'){ crea(3)}

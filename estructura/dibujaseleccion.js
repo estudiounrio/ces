@@ -103,8 +103,9 @@ const dt  = {
 
     'ipi' : {
         'ipi' :'453.1_SERIE_ORIGNAL_0_0_14_46,453.1_SERIE_DESEADA_0_0_24_58,453.1_SERIE_TENDCLO_0_0_21_61',
-        'ipi_div' : '453.1_SERIE_ORIGNAL_0_0_14_46,453.2_ALIMENTOS_DAS_0_0_17_18,453.2_PRODUCTOS_ACO_0_0_16_81,453.2_PRODUCTOS_LES_0_0_18_32,453.2_PRENDAS_VEADO_0_0_28_88,453.2_MADERA_PAPION_0_0_30_66,453.2_REFINACIONEAR_0_0_45_82,453.2_SUSTANCIASCOS_0_0_29_82,453.2_PRODUCTOS_ICO_0_0_25_26',
-        'ipi_div_' : '453.1_SERIE_ORIGNAL_0_0_14_46,453.2_PRODUCTOS_COS_0_0_32_70,453.2_INDUSTRIASCAS_0_0_28_0,453.2_PRODUCTOS_TAL_0_0_15_15,453.2_MAQUINARIAIPO_0_0_17_14,453.2_OTROS_EQUITOS_0_0_35_77,453.2_VEHICULOS_TES_0_0_54_37,453.2_OTRO_EQUIPRTE_0_0_25_29,453.2_MUEBLES_CORAS_0_0_49_35'
+        'ipi_div' : '453.1_SERIE_ORIGNAL_0_0_14_46,453.2_ALIMENTOS_DAS_0_0_17_18,453.2_PRODUCTOS_ACO_0_0_16_81,453.2_PRODUCTOS_LES_0_0_18_32,453.2_PRENDAS_VEADO_0_0_28_88,453.2_MADERA_PAPION_0_0_30_66',
+        'ipi_div_':'453.1_SERIE_ORIGNAL_0_0_14_46,453.2_REFINACIONEAR_0_0_45_82,453.2_SUSTANCIASCOS_0_0_29_82,453.2_PRODUCTOS_ICO_0_0_25_26,453.2_PRODUCTOS_COS_0_0_32_70,453.2_MUEBLES_CORAS_0_0_49_35',
+        'ipi_div__' : '453.1_SERIE_ORIGNAL_0_0_14_46,453.2_INDUSTRIASCAS_0_0_28_0,453.2_PRODUCTOS_TAL_0_0_15_15,453.2_MAQUINARIAIPO_0_0_17_14,453.2_OTROS_EQUITOS_0_0_35_77,453.2_VEHICULOS_TES_0_0_54_37,453.2_OTRO_EQUIPRTE_0_0_25_29'
 
     }
 
@@ -137,6 +138,8 @@ const dibujaSeleccion = (seleccion) => {
         Graficar(dt.ipi.ipi_div,tg[3],true,'bar','anual','ïndice de Produción Industrial (IPI). Por Divisiones','Variación %')
         Graficar(dt.ipi.ipi_div_,tg[4],true,'','','ïndice de Produción Industrial (IPI). Por divisiones (Cont)','Índice Base=2004. INDEC')
         Graficar(dt.ipi.ipi_div_,tg[5],true,'bar','anual','ïndice de Produción Industrial (IPI). Por Divisiones','Variación %')
+        Graficar(dt.ipi.ipi_div__,tg[6],true,'','','ïndice de Produción Industrial (IPI). Por divisiones (Cont)','Índice Base=2004. INDEC')
+        Graficar(dt.ipi.ipi_div__,tg[7],true,'bar','anual','ïndice de Produción Industrial (IPI). Por Divisiones','Variación %')
 
 
     }

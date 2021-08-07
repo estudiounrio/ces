@@ -1,13 +1,13 @@
 const diapo = (lado,cantidad) => {
     let diapositivas = `
         <div class="carousel-item active">
-            <img src="img/sliders/${lado}/Diapositiva1.svg" class="d-block w-100" alt="...">
+            <img src="img/sliders/${lado}/Diapositiva1.SVG" class="d-block w-100" alt="...">
         </div>
     `
     for(let i=2;i<=cantidad;i++){
         diapositivas += `
         <div class="carousel-item">
-            <img src="img/sliders/${lado}/Diapositiva${i}.svg" class="d-block w-100" alt="...">
+            <img src="img/sliders/${lado}/Diapositiva${i}.SVG" class="d-block w-100" alt="...">
         </div>
         `
     }

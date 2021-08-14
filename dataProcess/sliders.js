@@ -15,9 +15,9 @@ const diapo = (lado,cantidad) => {
 }
 
 
-// document.getElementById('diapositivasDerechaCoyuntural').innerHTML = diapo('coyuntural_derecha',5)
+document.getElementById('diapositivasDerechaCoyuntural').innerHTML = diapo('coyuntural_derecha',5)
 // document.getElementById('diapositivasDerechaCoyuntural_abajo').innerHTML = diapo('coyuntural_derecha-abajo',4)
-// document.getElementById('diapositivasIzquierdaCoyuntural').innerHTML = diapo('coyuntural_izquierda',3)
+document.getElementById('diapositivasIzquierdaCoyuntural').innerHTML = diapo('coyuntural_izquierda',3)
 // document.getElementById('diapositivasIzquierdaCoyuntural_abajo').innerHTML = diapo('coyuntural_izquierda-abajo',4)
 
 
@@ -29,6 +29,6 @@ const diapo = (lado,cantidad) => {
 
 
 
-// document.getElementById('cerrar').addEventListener('click', e =>
-//     document.getElementById('slider').innerHTML = ''
-// )
+document.getElementById('cerrar').addEventListener('click', e =>
+    document.getElementById('slider').innerHTML = ''
+)

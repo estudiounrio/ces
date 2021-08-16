@@ -1,5 +1,5 @@
 
-const diapo = (lado,cantidad,nro) => {
+const carru = (lado,cantidad,nro) => {
 
     let carrousel = `
         <div id="carouselExampleIndicators${nro}" class="carousel" data-bs-ride="carousel">
@@ -33,13 +33,42 @@ const diapo = (lado,cantidad,nro) => {
 }
 
 
+let elmodal = document.querySelector('#fichas')
+console.log(elmodal)
+elmodal.setAttribute('data-bs-toggle','modal')
+elmodal.setAttribute('data-bs-target','#staticBackdrop')
 
-// document.getElementById('ipi').innerHTML = diapo('ipi',5,1)
-// document.getElementById('emae').innerHTML = diapo('emae',3,2)
-// document.getElementById('uci').innerHTML = diapo('uci',4,3)
-// document.getElementById('sipim').innerHTML = diapo('sipim',4,4)
+elmodal.addEventListener('click', e => {
 
 
-document.getElementById('cerrar').addEventListener('click', e =>
-    document.getElementById('slider').innerHTML = ''
-)
+        let cantidad
+        switch (e.target.name) {
+            case 'ipi': cantidad=5
+                break;
+            case 'sipim': cantidad=4
+                break;
+            case 'uci': cantidad=4
+                break;
+            case 'emae': cantidad=3
+                break;
+            default: cantidad=0
+                break;
+        }
+        if(cantidad>0){
+
+        let dv= document.createElement('div')
+        dv.setAttribute('id','dv')
+        document.getElementById('modalInner').appendChild(dv)
+        document.getElementById('dv').innerHTML = carru(e.target.name,cantidad,0)
+        }
+    e.stopPropagation()
+})
+
+
+
+
+
+
+// document.getElementById('cerrar').addEventListener('click', e =>
+//     document.getElementById('slider').innerHTML = ''
+// )

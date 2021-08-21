@@ -34,9 +34,9 @@ const diapo = (lado,cantidad,nro) => {
 
 
 
-// document.getElementById('ipi').innerHTML = diapo('ipi',5,1)
-// document.getElementById('emae').innerHTML = diapo('emae',3,2)
-// document.getElementById('uci').innerHTML = diapo('uci',4,3)
+document.getElementById('comex').innerHTML = diapo('comex',6,1)
+document.getElementById('bioeconomia').innerHTML = diapo('bioeconomia',6,2)
+document.getElementById('coop').innerHTML = diapo('coop',4,3)
 // document.getElementById('sipim').innerHTML = diapo('sipim',4,4)
 
 

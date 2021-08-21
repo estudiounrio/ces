@@ -33,14 +33,12 @@ const carru = (lado,cantidad,nro) => {
 }
 
 
-let elmodal = document.querySelector('#fichas')
+let elmodal = document.querySelector('.fichas')
 console.log(elmodal)
 elmodal.setAttribute('data-bs-toggle','modal')
 elmodal.setAttribute('data-bs-target','#staticBackdrop')
 
 elmodal.addEventListener('click', e => {
-
-
         let cantidad
         switch (e.target.name) {
             case 'ipi': cantidad=5
@@ -51,15 +49,16 @@ elmodal.addEventListener('click', e => {
                 break;
             case 'emae': cantidad=3
                 break;
+            case 'pbi': cantidad=4
+                break;
             default: cantidad=0
                 break;
         }
         if(cantidad>0){
-
-        let dv= document.createElement('div')
-        dv.setAttribute('id','dv')
-        document.getElementById('modalInner').appendChild(dv)
-        document.getElementById('dv').innerHTML = carru(e.target.name,cantidad,0)
+            let dv= document.createElement('div')
+            dv.setAttribute('id','dv')
+            document.getElementById('modalInner').appendChild(dv)
+            document.getElementById('dv').innerHTML = carru(e.target.name,cantidad,0)
         }
     e.stopPropagation()
 })
